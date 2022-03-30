@@ -40,7 +40,7 @@ Napi::Value Resize(const Napi::CallbackInfo &info) {
       if (stretch) {
         image.resize(Geometry("512x512!"));
       } else if (wide) {
-        image.resize(Geometry(to_string((image.baseColumns() * 19) / 2) + "x" +
+        image.resize(Geometry(to_string((image.baseColumns() * 5) / 2) + "x" +
                               to_string(image.baseRows() / 2) + "!"));
       } else {
         image.scale(Geometry("10%"));

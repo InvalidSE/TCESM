@@ -138,12 +138,12 @@ export default async (client, cluster, worker, ipc, message) => {
                 url: imageURL
               },
               footer: {
-                text: "The result image was more than 8MB in size, so it was uploaded to an external site instead."
+                text: "The image was hella chonk so it's not on discord"
               },
             }]
           }, reference));
         } else {
-          await client.createMessage(message.channel.id, "The resulting image was more than 8MB in size, so I can't upload it.");
+          await client.createMessage(message.channel.id, "the image was almost as large as your mother, so not uploading it");
         }
       } else {
         await client.createMessage(message.channel.id, Object.assign({
@@ -154,21 +154,21 @@ export default async (client, cluster, worker, ipc, message) => {
   } catch (error) {
     if (error.toString().includes("Request entity too large")) {
       await client.createMessage(message.channel.id, Object.assign({
-        content: "The resulting file was too large to upload. Try again with a smaller image if possible."
+        content: "file was too large bruh"
       }, reference));
     } else if (error.toString().includes("Job ended prematurely")) {
       await client.createMessage(message.channel.id, Object.assign({
-        content: "Something happened to the image servers before I could receive the image. Try running your command again."
+        content: "image server died, do it again"
       }, reference));
     } else if (error.toString().includes("Timed out")) {
       await client.createMessage(message.channel.id, Object.assign({
-        content: "The request timed out before I could download that image. Try uploading your image somewhere else or reducing its size."
+        content: "it timed me out, maybe make it smaller or try again"
       }, reference));
     } else {
       _error(`Error occurred with command message ${message.cleanContent}: ${error.toString()}`);
       try {
         await client.createMessage(message.channel.id, Object.assign({
-          content: "Uh oh! I ran into an error while running this command. Please report the content of the attached file at the following link or on the esmBot Support server: <https://github.com/esmBot/esmBot/issues>"
+          content: "ran into an error, cry about it"
         }, reference), [{
           file: `Message: ${await clean(error)}\n\nStack Trace: ${await clean(error.stack)}`,
           name: "error.txt"

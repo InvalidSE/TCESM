@@ -62,7 +62,7 @@ class ImageCommand extends Command {
           return "that's a massive fucking image holy shit no thanks";
         } else if (image.type === "tenorlimit") {
           runningCommands.delete(this.message.author.id);
-          return "tenor rate limited me the fucks";
+          return "tenor rate limited me the fuck";
         }
         magickParams.path = image.path;
         magickParams.params.type = image.type;
