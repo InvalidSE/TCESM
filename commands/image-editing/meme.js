@@ -24,8 +24,8 @@ class MemeCommand extends ImageCommand {
   }];
 
   static requiresText = true;
-  static noText = "give text bro";
-  static noImage = "no fucking image lmao";
+  static noText = "https://media.discordapp.net/attachments/683228185076301862/958589247789625364/meme.png?width=486&height=486";
+  static noImage = "https://media.discordapp.net/attachments/683228185076301862/958589192089239572/meme.png?width=486&height=486";
   static command = "meme";
 }
 

@@ -11,7 +11,7 @@ class SpeechBubbleCommand extends ImageCommand {
   static description = "Adds a speech bubble to an image";
   static aliases = ["speech", "sb"];
 
-  static noImage = "no fucking image lmao";
+  static noImage = "https://media.discordapp.net/attachments/683228185076301862/958589894190583828/meme.gif?width=414&height=682";
   static command = "watermark";
 }
 
