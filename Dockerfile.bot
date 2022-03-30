@@ -63,15 +63,15 @@ RUN npm run build
 
 RUN mkdir /home/esmBot/help
 RUN chown esmBot:esmBot /home/esmBot/help
-RUN chmod 666 /home/esmBot/help
+RUN chmod 777 /home/esmBot/help
 
 RUN mkdir /home/esmBot/temp
 RUN chown esmBot:esmBot /home/esmBot/temp
-RUN chmod 666 /home/esmBot/temp
+RUN chmod 777 /home/esmBot/temp
 
 RUN mkdir /home/esmBot/.internal/logs
 RUN chown esmBot:esmBot /home/esmBot/.internal/logs
-RUN chmod 666 /home/esmBot/.internal/logs
+RUN chmod 777 /home/esmBot/.internal/logs
 
 USER esmBot
 
